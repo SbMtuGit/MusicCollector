@@ -1,0 +1,23 @@
+{
+  "name": "musiccollection",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "20.11.0",
+    "npm": "10.2.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.21.1",
+    "http-errors": "~1.6.3",
+    "mongodb": "^6.10.0",
+    "mongosh": "^2.3.2",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.3"
+  }
+}

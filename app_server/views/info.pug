@@ -1,0 +1,28 @@
+extends layout
+
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+      small &nbsp;#{pageHeader.strapline}
+    .row
+      .col-md-4
+        .card
+          .card-block
+            h4
+              a(href="/location/Discover") Music Discovery awaits you !! &nbsp;
+              small &nbsp;
+      .col-md-4
+        .card
+          .card-block
+            h4
+              a(href="/location/register") Register here to start your music adventure &nbsp;
+              small &nbsp;
+      .col-md-4
+        .card
+          .card-block
+            h4
+              a(href="/location/Login") Login here if your already a memeber ! &nbsp;
+              small &nbsp;
+  

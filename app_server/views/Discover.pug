@@ -1,0 +1,23 @@
+extends layout
+
+
+
+block content
+  .container
+    header
+      h1 DiscSearch
+      p All your music in one place
+    main
+      .row
+        each album in albums
+          .col-md-4.col-sm-6.col-xs-12.mb-3
+            .card
+              .card-img-top
+                img(src=album.cover, alt=album.title)
+              .card-body
+                h5= album.title
+                p Artist: #{album.artist}
+                p year:   #{album.year}
+                P Genre:  #{album.genre}
+                P Discription :  #{album.discription}
+                a.btn.btn-primary(href="/#") Add to Collection

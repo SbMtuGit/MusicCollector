@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  
+  body
+    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
+      .container
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        a.navbar-brand(href='/') DiscSearch
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/Location/Login') Login
+            li.nav-item
+              a.nav-link(href='/Location/Register') Register
+            li.nav-item
+              a.nav-link(href='/Location/Discover') Discover
+              
+    .container
+      block content
+
+       footer
+      footer.text-center.text-lg-start.bg-body-tertiary.text-muted
+        section
+          .container-sm.text-center.text-md-start.mt-3
+            .row.mt-2
+              .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-3
+                h6.text-uppercase.fw-bold.mb-3
+                  i.fas.fa-gem.me-2
+                  | DiscSearch
+                p The home of music since 2024.
+              
+              .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-3
+                h6.text-uppercase.fw-bold.mb-3
+                  | Navigation
+                p
+                  a.text-reset(href='#!') Home
+                p
+                  a.text-reset(href='#!') Login
+                p
+                  a.text-reset(href='#!') Discover
+                p
+                  a.text-reset(href='#!') Register
+
+      script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+      script(src='/javascripts/bootstrap.min.js')
