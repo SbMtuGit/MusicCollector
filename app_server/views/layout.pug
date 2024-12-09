@@ -6,7 +6,7 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  
+
   body
     nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
       .container
@@ -21,11 +21,11 @@ html
               a.nav-link(href='/Location/Register') Register
             li.nav-item
               a.nav-link(href='/Location/Discover') Discover
-              
+
     .container
       block content
 
-       footer
+    footer
       footer.text-center.text-lg-start.bg-body-tertiary.text-muted
         section
           .container-sm.text-center.text-md-start.mt-3
@@ -35,7 +35,7 @@ html
                   i.fas.fa-gem.me-2
                   | DiscSearch
                 p The home of music since 2024.
-              
+
               .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-3
                 h6.text-uppercase.fw-bold.mb-3
                   | Navigation
@@ -48,6 +48,8 @@ html
                 p
                   a.text-reset(href='#!') Register
 
-      script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
-      script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
-      script(src='/javascripts/bootstrap.min.js')
+    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+
+    block scripts

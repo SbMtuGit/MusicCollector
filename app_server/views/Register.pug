@@ -1,35 +1,23 @@
 extends layout
 
-
-
 block content
-    .container.h-80.pt-5 
-      .row.d-flex.justify-content-center.align-items-center.h-100
-        .col-lg-9.col-m-8 
-          .card.text-black(style='border-radius: 25px;')
-            .card-body.p-md-5
-              .row.justify-content-center
-                .col-md-10.col-lg-8.col-xl-7.order-2.order-lg-1
-                  p.text-center.h1.fw-bold.mb-4.mx-1.mx-md-4.mt-4 Sign up
-                  form.mx-1.mx-md-4
-                    .d-flex.flex-row.align-items-center.mb-4
-                      .form-outline.flex-fill.mb-0
-                        input#form3Example1c.form-control(type='text' required)
-                        label.form-label(for='form3Example1c') Username
-                    .d-flex.flex-row.align-items-center.mb-4
-                      .form-outline.flex-fill.mb-0
-                        input#form3Example3c.form-control(type='email' required)
-                        label.form-label(for='form3Example3c') Email
-                    .d-flex.flex-row.align-items-center.mb-4
-                      .form-outline.flex-fill.mb-0
-                        input#form3Example4c.form-control(type='password' required)
-                        label.form-label(for='form3Example4c') Password
-                    .d-flex.flex-row.align-items-center.mb-4
-                      .form-outline.flex-fill.mb-0
-                        input#form3Example4cd.form-control(type='password' required)
-                        label.form-label(for='form3Example4cd') Repeat your password
-                    .d-flex.flex-row.justify-content-center.mb-3.mb-lg-4
-                      button.btn.btn-primary.btn-lg(type='submit') Register
+  .container
+    h1 Register
+    form(action="/auth/register", method="POST")
+      .form-group
+        label(for="username") Username:
+        input.form-control(type="text", name="username", id="username", required)
+      .form-group
+        label(for="email") Email:
+        input.form-control(type="email", name="email", id="email", required)
+      .form-group
+        label(for="password") Password:
+        input.form-control(type="password", name="password", id="password", required)
+      .form-group
+        label(for="confirmPassword") Confirm Password:
+        input.form-control(type="password", name="confirmPassword", id="confirmPassword", required)
+      button.btn.btn-primary(type="submit") Register
+    if error
+      .alert.alert-danger
+        p= error
 
-                .col-md-10.col-lg-6.col-xl-5.d-flex.align-items-center.order-1.order-lg-2.mt-4.mt-lg-0
-                  img.img-fluid(src='DiscSearch/app_server/images/pic03.jpg' alt='Sample image' style='border-radius: 15px;')

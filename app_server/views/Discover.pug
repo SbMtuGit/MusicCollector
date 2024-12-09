@@ -1,23 +1,32 @@
 extends layout
-
-
-
 block content
   .container
     header
       h1 DiscSearch
       p All your music in one place
+    
+    .row
+      .col-4
+        input.form-control(type='text', placeholder='Search for an artist')
+        a.btn.btn-primary(href="/#") Search
+    
     main
       .row
-        each album in albums
-          .col-md-4.col-sm-6.col-xs-12.mb-3
-            .card
-              .card-img-top
-                img(src=album.cover, alt=album.title)
-              .card-body
-                h5= album.title
-                p Artist: #{album.artist}
-                p year:   #{album.year}
-                P Genre:  #{album.genre}
-                P Discription :  #{album.discription}
-                a.btn.btn-primary(href="/#") Add to Collection
+        .col-12.col-md-8
+          .error= message
+            app-home-list Loading
+        
+        .col-md-4.col-sm-6.col-xs-12.mb-3
+          .card
+           
+            .card-body
+              h5= album.title
+              p Artist: #{album.artist}
+              p Year: #{album.year}
+              p Genre: #{album.genre}
+              p Description: #{album.description}
+              a.btn.btn-primary(href="/#") Add to Collection
+
+block scripts
+  script(src='/build/polyfills.js')
+  script(src='/build/main.js')
